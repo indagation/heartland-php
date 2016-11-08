@@ -90,7 +90,7 @@ class HpsCreditService extends HpsSoapGatewayService
         $hpsCreditSale = $xml->createElement('hps:CreditSale');
         $hpsBlock1 = $xml->createElement('hps:Block1');
 
-        $hpsBlock1->appendChild($xml->createElement('hps:AllowDup', 'Y'));
+        $hpsBlock1->appendChild($xml->createElement('hps:AllowDup', 'N'));
         $hpsBlock1->appendChild($xml->createElement('hps:AllowPartialAuth', ($allowPartialAuth ? 'Y' : 'N')));
         $hpsBlock1->appendChild($xml->createElement('hps:Amt', $amount));
         if ($cardHolder != null) {
